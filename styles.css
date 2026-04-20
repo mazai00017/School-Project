@@ -8,13 +8,13 @@ body {
 
 header {
     background: linear-gradient(90deg, #8b0000 0%, #b30000 55%, #333333 100%);
-    color: cream;
+    color: white;
     padding: 24px 20px;
     text-align: center;
 }
 
 header h1 {
-    color: cream;
+    color: white;
     margin: 0 0 8px 0;
 }
 
