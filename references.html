@@ -1,71 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>References</title>
-<link rel="stylesheet" href="styles.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive IT 3203 research site explaining the evolution of HTTP, HTTPS, TLS, QUIC, and HTTP/3.">
+  <title>Research Resources and Comments | The Evolution of HTTP and HTTPS</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">IT 3203 Project Milestone 3</p>
+        <h1>The Evolution of HTTP and HTTPS</h1>
+        <p class="tagline">How web communication grew from simple document requests into secure, responsive, high-performance internet infrastructure.</p>
+      </div>
+      <div class="protocol-badge" aria-label="Protocol focus">
+        <span>HTTP</span>
+        <span>TLS</span>
+        <span>QUIC</span>
+      </div>
+    </div>
+  </header>
 
-<header>
-<h1>The Evolution of HTTP and HTTPS</h1>
-<p>IT 3203 Project Milestone 2</p>
-</header>
-
-
-<!-- FIX FROM MILESTONE 1:
-Updated navigation links to use correct relative paths.
-Added the quiz page link to the main menu for Milestone 2. -->
-<nav>
-<a href="index.html">Home</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
+    <div class="menu-links" id="main-menu">
+      <a href="index.html">Home</a>
 <a href="history.html">History</a>
 <a href="security.html">Security</a>
-<a href="concepts.html">Concepts</a>
-<a href="references.html">References</a>
+<a href="performance.html">HTTP/3</a>
+<a href="concepts.html">Key Concepts</a>
+<a href="references.html" aria-current="page">References</a>
 <a href="about.html">About</a>
 <a href="quiz.html">Quiz</a>
-</nav>
+    </div>
+  </nav>
 
+  <main id="main-content" class="page-shell">
+    <section class="page-title">
+      <p class="eyebrow">References</p>
+      <h2>Research Resources and Comments</h2>
+      <p>A complete list of standards, developer references, and current web resources used to support the site.</p>
+    </section>
+    
+<section class="section-card">
+  <h3>Research resources with comments</h3>
+  <p>The resources below support the research pages and key concepts. Standards documents are included because HTTP, HTTPS, QUIC, and TLS are technical protocols, so primary specifications matter.</p>
+</section>
+<section class="reference-list">
+  <article class="reference-item">
+  <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview">MDN Web Docs: Overview of HTTP</a></h3>
+  <p>Used for the basic client-server explanation, request-response flow, and HTTP position in the web stack.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">MDN Web Docs: HTTP</a></h3>
+  <p>Used for HTTP definitions, statelessness, methods, headers, and general developer reference material.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP">MDN Web Docs: Evolution of HTTP</a></h3>
+  <p>Used for the historical movement from early HTTP to HTTP/1.1, HTTP/2, and HTTP/3.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://datatracker.ietf.org/doc/html/rfc9110">IETF RFC 9110: HTTP Semantics</a></h3>
+  <p>Used for the standards-based explanation of HTTP semantics shared across versions.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://datatracker.ietf.org/doc/html/rfc9111">IETF RFC 9111: HTTP Caching</a></h3>
+  <p>Used for explaining why caching is part of HTTP performance and reliability.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://datatracker.ietf.org/doc/html/rfc9112">IETF RFC 9112: HTTP/1.1</a></h3>
+  <p>Used for technical background on HTTP/1.1 message syntax and connection behavior.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://datatracker.ietf.org/doc/html/rfc9113">IETF RFC 9113: HTTP/2</a></h3>
+  <p>Used for HTTP/2 features such as binary framing, multiplexing, and header compression.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://datatracker.ietf.org/doc/html/rfc9114">IETF RFC 9114: HTTP/3</a></h3>
+  <p>Used for HTTP/3 structure, QUIC mapping, streams, and protocol goals.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://datatracker.ietf.org/doc/html/rfc9000">IETF RFC 9000: QUIC</a></h3>
+  <p>Used for QUIC background, UDP transport behavior, stream multiplexing, and TLS integration.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://datatracker.ietf.org/doc/html/rfc8446">IETF RFC 8446: TLS 1.3</a></h3>
+  <p>Used for explaining modern TLS security concepts behind HTTPS and QUIC.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://web.dev/articles/why-https-matters">web.dev: Why HTTPS Matters</a></h3>
+  <p>Used for explaining why HTTPS protects integrity, privacy, and modern browser feature access.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://web.dev/articles/enable-https">web.dev: Enable HTTPS on Your Servers</a></h3>
+  <p>Used for certificate, CSR, key, and deployment best-practice explanation.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://letsencrypt.org/how-it-works/">Let’s Encrypt: How It Works</a></h3>
+  <p>Used for practical explanation of certificate issuance and domain validation.</p>
+</article>
+<article class="reference-item">
+  <h3><a href="https://almanac.httparchive.org/en/2025/">HTTP Archive Web Almanac 2025</a></h3>
+  <p>Used as a current web-industry source for understanding how the modern web is measured and analyzed.</p>
+</article>
+</section>
 
-<div class="container">
+  </main>
 
-<!-- References page -->
-<h2>References</h2>
-<p class="section-highlight">The information in this website comes from essay research and added web resources about the evolution of HTTP and HTTPS.</p>
-
-<ol>
-<li>MDN Web Docs - HTTP: Hypertext Transfer Protocol</li>
-<li>High Performance Browser Networking - Brief History of HTTP</li>
-<li>INNOQ - A Brief History of HTTP</li>
-<li>U.S. Web Design System - HTTP/2 Performance Guide</li>
-<li>SecurityScorecard - What is HTTPS and Why is it Essential?</li>
-<li>Fortinet - What is HTTPS?</li>
-<li>UpGuard - What is HTTPS and why is it important?</li>
-</ol>
-
-<h2>Extra Resources</h2>
-<ul>
-<li>W3Schools tutorials about forms and JavaScript</li>
-<li>Class examples on required fields, form methods, and buttons</li>
-<li>GitHub Pages documentation for deployment</li>
-<li>Browser developer tools for testing and debugging</li>
-</ul>
-
-<h2>Why Sources Matter</h2>
-<p>Using references improves the accuracy of the website and supports the information presented in each section. It also shows how research connects to web development practice.</p>
-
-</div>
-
-
-<!-- REQUIRED:
-Added class project note and link to the class website in the footer. -->
-<footer>
-<p>This website was created as a class project for IT 3203.
-Visit the class site:
-<a href="https://ksuweb.github.io/IT3203/" target="_blank">KSU IT 3203</a></p>
-</footer>
-
-
-
+  <footer class="site-footer">
+    <p>This website was created as a class project for IT 3203. Visit the class site: <a href="https://ksuweb.github.io/IT3203/">KSU IT 3203</a>.</p>
+    <p>Created by Ryan Mangunda | Kennesaw State University</p>
+  </footer>
 </body>
 </html>

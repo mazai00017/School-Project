@@ -1,81 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Concepts</title>
-<link rel="stylesheet" href="styles.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive IT 3203 research site explaining the evolution of HTTP, HTTPS, TLS, QUIC, and HTTP/3.">
+  <title>Terms That Explain the Protocol Stack | The Evolution of HTTP and HTTPS</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">IT 3203 Project Milestone 3</p>
+        <h1>The Evolution of HTTP and HTTPS</h1>
+        <p class="tagline">How web communication grew from simple document requests into secure, responsive, high-performance internet infrastructure.</p>
+      </div>
+      <div class="protocol-badge" aria-label="Protocol focus">
+        <span>HTTP</span>
+        <span>TLS</span>
+        <span>QUIC</span>
+      </div>
+    </div>
+  </header>
 
-<header>
-<h1>The Evolution of HTTP and HTTPS</h1>
-<p>IT 3203 Project Milestone 2</p>
-</header>
-
-
-<!-- FIX FROM MILESTONE 1:
-Updated navigation links to use correct relative paths.
-Added the quiz page link to the main menu for Milestone 2. -->
-<nav>
-<a href="index.html">Home</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
+    <div class="menu-links" id="main-menu">
+      <a href="index.html">Home</a>
 <a href="history.html">History</a>
 <a href="security.html">Security</a>
-<a href="concepts.html">Concepts</a>
+<a href="performance.html">HTTP/3</a>
+<a href="concepts.html" aria-current="page">Key Concepts</a>
 <a href="references.html">References</a>
 <a href="about.html">About</a>
 <a href="quiz.html">Quiz</a>
-</nav>
-
-
-<div class="container">
-
-<!-- Concepts page -->
-<h2>Key Concepts</h2>
-<p class="section-highlight">These terms help explain how browsers, servers, and secure communication work together.</p>
-
-<div class="card-grid">
-    <div class="info-card">
-        <h3>Client-server model</h3>
-        <p>The browser sends a request and the server sends a response. This request-response model is one of the main ideas behind HTTP.</p>
     </div>
-    <div class="info-card">
-        <h3>Stateless protocol</h3>
-        <p>HTTP does not remember earlier requests unless extra tools are used. This makes the protocol simpler but also creates the need for sessions and cookies.</p>
-    </div>
-    <div class="info-card">
-        <h3>TCP</h3>
-        <p>Used by earlier HTTP versions for reliable delivery. TCP helps make sure data arrives correctly and in order.</p>
-    </div>
-    <div class="info-card">
-        <h3>QUIC</h3>
-        <p>Used by HTTP/3 to improve speed and reduce delay. QUIC is part of the reason HTTP/3 performs better on modern connections.</p>
-    </div>
-</div>
+  </nav>
 
-<h2>Concept Summary Table</h2>
-<table>
-<tr><th>Concept</th><th>Meaning</th></tr>
-<tr><td>Client-server</td><td>Communication between the browser and web server</td></tr>
-<tr><td>Stateless</td><td>No memory of earlier requests unless extra tools are used</td></tr>
-<tr><td>TLS</td><td>Encryption that protects HTTPS traffic</td></tr>
-<tr><td>QUIC</td><td>Newer transport method used in HTTP/3</td></tr>
-</table>
+  <main id="main-content" class="page-shell">
+    <section class="page-title">
+      <p class="eyebrow">Key Concepts</p>
+      <h2>Terms That Explain the Protocol Stack</h2>
+      <p>These concepts connect the research pages and help explain the technical vocabulary behind web communication.</p>
+    </section>
+    
+<section class="section-card">
+  <h3>Key concepts and definitions</h3>
+  <div class="table-scroll" role="region" aria-label="Key concepts table" tabindex="0">
+    <table>
+      <caption>Terms used throughout the website</caption>
+      <thead><tr><th>Term</th><th>Definition</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Client</td><td>The device or software that starts the request, usually a browser.</td><td>Explains why web communication begins with the user agent.</td></tr>
+        <tr><td>Server</td><td>The system that receives a request and returns a response.</td><td>Shows where web resources and application logic are delivered from.</td></tr>
+        <tr><td>Request</td><td>A message sent by the client asking for a resource or action.</td><td>Forms the basic unit of interaction in HTTP.</td></tr>
+        <tr><td>Response</td><td>A message sent by the server after processing the request.</td><td>Includes content, status codes, and headers.</td></tr>
+        <tr><td>Statelessness</td><td>HTTP does not automatically remember previous requests.</td><td>Explains why cookies, sessions, and tokens are needed for logins.</td></tr>
+        <tr><td>TLS</td><td>A security protocol that encrypts and authenticates communication.</td><td>Provides the protection that makes HTTPS useful.</td></tr>
+        <tr><td>Certificate Authority</td><td>An organization trusted to issue digital certificates.</td><td>Helps browsers verify that a site is who it claims to be.</td></tr>
+        <tr><td>QUIC</td><td>A modern transport protocol used by HTTP/3.</td><td>Improves connection setup, security integration, and stream behavior.</td></tr>
+        <tr><td>Cache</td><td>A stored copy of a resource used to avoid unnecessary transfers.</td><td>Improves speed and reduces server load.</td></tr>
+        <tr><td>Status code</td><td>A three-digit number explaining the result of a request.</td><td>Lets browsers and developers understand success, redirects, and errors.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<h2>Why These Terms Matter</h2>
-<p>These ideas help explain not only how websites work, but also why the web has to balance performance, simplicity, and security.</p>
+<section class="content-grid three-columns">
+  <article class="info-card"><h3>Methods</h3><p>Common HTTP methods include GET for retrieving resources and POST for sending data to be processed by the server.</p></article>
+  <article class="info-card"><h3>Headers</h3><p>Headers carry metadata such as content type, cache rules, cookies, accepted languages, and authentication tokens.</p></article>
+  <article class="info-card"><h3>Status codes</h3><p>Status codes such as 200, 301, 404, and 500 quickly describe whether a request succeeded, redirected, failed, or caused a server error.</p></article>
+</section>
 
-</div>
+<section class="section-card callout">
+  <h3>Concept map</h3>
+  <p>HTTP defines the meaning of web messages. TLS protects those messages. QUIC changes how modern HTTP can move across a network. Together, they explain why the modern web can be interactive, secure, and fast.</p>
+</section>
 
+  </main>
 
-<!-- REQUIRED:
-Added class project note and link to the class website in the footer. -->
-<footer>
-<p>This website was created as a class project for IT 3203.
-Visit the class site:
-<a href="https://ksuweb.github.io/IT3203/" target="_blank">KSU IT 3203</a></p>
-</footer>
-
-
-
+  <footer class="site-footer">
+    <p>This website was created as a class project for IT 3203. Visit the class site: <a href="https://ksuweb.github.io/IT3203/">KSU IT 3203</a>.</p>
+    <p>Created by Ryan Mangunda | Kennesaw State University</p>
+  </footer>
 </body>
 </html>
